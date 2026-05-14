@@ -1,0 +1,87 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AcademiQ — Academic Intelligence</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="logo-badge">EST. 2026</div>
+    <h1>Acad<em>emi</em>Q</h1>
+    <p class="tagline">Your scholarly intelligence engine</p>
+  </header>
+
+  <div class="subjects">
+    <button class="chip active" data-subject="">All Subjects</button>
+    <button class="chip" data-subject="Mathematics">Mathematics</button>
+    <button class="chip" data-subject="Physics">Physics</button>
+    <button class="chip" data-subject="Chemistry">Chemistry</button>
+    <button class="chip" data-subject="Biology">Biology</button>
+    <button class="chip" data-subject="Computer Science">Computer Science</button>
+    <button class="chip" data-subject="History">History</button>
+    <button class="chip" data-subject="Economics">Economics</button>
+  </div>
+
+  <div class="question-box">
+    <span class="question-label">Your Question</span>
+
+    <textarea
+      id="questionInput"
+      placeholder="Ask anything academic — explain concepts, solve problems, analyze theories..."
+      maxlength="2000"
+    ></textarea>
+  </div>
+
+  <div class="actions">
+    <button id="askBtn" class="btn-ask">Ask →</button>
+    <button id="clearBtn" class="btn-clear">Clear</button>
+    <span id="charCount" class="char-count">0 / 2000</span>
+  </div>
+
+  <div class="thinking" id="thinkingIndicator">
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    Thinking deeply...
+  </div>
+
+  <div class="error-msg" id="errorMsg"></div>
+
+  <div class="answer-section" id="answerSection">
+    <div class="answer-header">
+      <span class="answer-label">Answer</span>
+      <div class="answer-divider"></div>
+    </div>
+
+    <div class="answer-card">
+      <div class="question-echo" id="questionEcho"></div>
+      <div class="answer-text" id="answerText"></div>
+    </div>
+  </div>
+
+  <footer>
+    AcademiQ · Powered by AI · Academic Assistant
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+```
+
+---

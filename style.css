@@ -1,0 +1,266 @@
+```css
+:root {
+  --ink: #0e0c0a;
+  --paper: #f5f0e8;
+  --sepia: #c9b99a;
+  --accent: #b8390e;
+  --gold: #c9a84c;
+  --muted: #6b6560;
+  --card-bg: #faf7f2;
+  --border: #ddd5c5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+.container {
+  max-width: 850px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo-badge {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 5px 14px;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+}
+
+h1 em {
+  color: var(--accent);
+}
+
+.tagline {
+  margin-top: 10px;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  font-size: 12px;
+}
+
+.subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.chip {
+  border: 1px solid var(--border);
+  background: white;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.chip.active,
+.chip:hover {
+  background: var(--ink);
+  color: white;
+}
+
+.question-box {
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  margin-bottom: 20px;
+}
+
+.question-label {
+  display: block;
+  padding: 14px 18px 0;
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+  border: none;
+  resize: vertical;
+  outline: none;
+  padding: 14px 18px 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  background: transparent;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.btn-ask {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  cursor: pointer;
+}
+
+.btn-clear {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.char-count {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.thinking {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.thinking.active {
+  display: flex;
+}
+
+.dots span {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+  animation: bounce 1.2s infinite;
+}
+
+.dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.answer-section {
+  display: none;
+}
+
+.answer-section.visible {
+  display: block;
+}
+
+.answer-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.answer-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.answer-divider {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.answer-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--gold);
+  padding: 30px;
+}
+
+.question-echo {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-family: 'Playfair Display', serif;
+}
+
+.answer-text {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.error-msg {
+  display: none;
+  background: #ffe7e1;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-left: 4px solid var(--accent);
+}
+
+.error-msg.show {
+  display: block;
+}
+
+footer {
+  margin-top: 60px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+  }
+
+  .char-count {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+```
+
+---
